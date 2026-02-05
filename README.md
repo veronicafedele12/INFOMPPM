@@ -13,51 +13,33 @@ This course centers on the question: how can recommender systems implement publi
 
 This course approaches recommender systems from a humanities perspective; students are challenged to critically engage with data-driven technology with an explicit focus on values. It is less "hardcore" technical but decidedly interdisciplinary with a firm grounding in humanities/media studies. The course has three pillars: 
 1. conceptual
-2. design,
+2. design
 3. technical
 
 Within this integrative framework, you will explore the interplay between data, technology, and (public) values.
 
-## Overview
-### Week 01
-In the seminar session, we will first discuss how public values connect to recommender systems. You will then need to think about the data you would need to build a recommender system and how that poses opportunities but also risks for different values. We then turn to the basics of building a recommender in Python:
-
-1. Non-personalized recommendations (ratings, seeded, confidence, support)
-2. Implicit ratings
-3. Running Streamlit
-
-The activities aim to test your knowledge about the readings, get your codebook running, extract features from existing data, and practice with core concepts.
-
-### Week 02
-In week two we will discuss the difference and connection between content-based and collaborative-filtering-based recommender systems. We will introduce techniques for generating recommendations with relevant data in more detail. This entails a discussion of content features (what is available and what to select) as well as different statistical methods, such as cosine similarities, Jaccard distance, and k-means clustering. We will also address data sparsity.
-
-During the seminar, we will focus on the following topics:
-1. Similarity measures
-2. Clustering
-
-### Week 03
-During the seminar, we will critically discuss different metrics for (public) values (e.g., diversity). What is possible? Where do current propositions fall short? How would you operationalize values? We then explore ways for how to enrich our data for more flexibility in experimenting with values and generating “better” recommendations. 
-
-### Week 04
-...
-
-### Week 05
-...
-
-### Week 06
-...
-
-### Week 07
-...
-
 ## Running the code
+
+Students are expected to have basic Python skills. You are expected to have a working Python installation before the start of the course. We recommend you use Python 3.12.
+
 ### Creating a virtual environment
-See the [official Python documentation on working with virtual environments](https://docs.python.org/3/library/venv.html). The dependencies were tested against Python 3.11.10
+It is good practice to use a virtual environment to manage your installed Python libraries. See the [official Python documentation on working with virtual environments](https://docs.python.org/3/library/venv.html).
 
-Next install any requirements you need for the week's assignments, at a minimum: `pip install jupyter streamlit`
+Install the Python libraries from the requirements file:
 
-Start the notebook server and launch the interface using `jupyter notebook`
+```sh
+pip install -r requirements.txt
+```
 
+The course materials includes Jupyter notebooks (`.ipynb` files) and Python scripts (`.py` files). 
+
+To work with the code, you are free to use a code editor or IDE you prefer. Visual Studio Code is a suitable program for the course. Their website includes extensive tutorials on [working with Python](https://code.visualstudio.com/docs/python/python-quick-start) and [working with Jupyter notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
+
+You can also start Jupyter from a terminal using:
+
+```sh
+jupyter notebook
+```
 
 ## Authors
-This repository is maintained by [Erik Hekman](https://www.linkedin.com/in/erikhekman), [David Gauthier](https://www.uu.nl/staff/DGauthier), [Dennis Nguyen](https://www.linkedin.com/in/dennisnguyenphd/), and [Jelte van Boheemen](https://www.uu.nl/medewerkers/JvanBoheemen)
+This repository is maintained by [Erik Hekman](https://www.linkedin.com/in/erikhekman), [David Gauthier](https://www.uu.nl/staff/DGauthier), [Dennis Nguyen](https://www.linkedin.com/in/dennisnguyenphd/), [Jelte van Boheemen](https://www.uu.nl/medewerkers/JvanBoheemen), and [Luka van der Plas](https://www.uu.nl/medewerkers/LPvanderPlas).
