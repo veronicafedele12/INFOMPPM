@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import template as t
-import itertools
 
 st.set_page_config(layout="wide")
 
@@ -21,19 +20,21 @@ st.session_state['User-ID'] = 98783
 def get_jaccard_recommendations(id):
 
   # your Jaccard code goes here
-  
-  return df_recommendations
+
+  # as dummy output, return empty selection
+  return df_books.iloc[0:0]
+
 
 # create a dataframe where you get all the ratings from the selected user
 df_user_ratings = df_ratings[df_ratings['User-ID'] == st.session_state['User-ID']]
 
 # display the reviews of the user
 st.subheader('User '+str(st.session_state['User-ID'])+' reviewed')
-df = df_user_ratings.merge(df_books, on='ISBN')
+df = df_user_ratings.merge(df_books, on='ISBN', suffixes=(None, '_2'))
 t.recommendations(df)
 
 # display the recommendations for the user
 st.subheader('Reviews based on Jaccard distance to other users')
 df_recommendations = get_jaccard_recommendations(st.session_state['User-ID'])
-df = df_recommendations.merge(df_books, on='ISBN').head(10)
+df = df_recommendations.merge(df_books, on='ISBN', suffixes=(None, '_2')).head(10)
 t.recommendations(df)
