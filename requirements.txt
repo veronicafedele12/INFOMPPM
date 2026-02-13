@@ -49,6 +49,10 @@ comm==0.2.3
     # via
     #   ipykernel
     #   ipywidgets
+contourpy==1.3.3
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 debugpy==1.8.20
     # via ipykernel
 decorator==5.2.1
@@ -59,6 +63,8 @@ executing==2.2.1
     # via stack-data
 fastjsonschema==2.21.2
     # via nbformat
+fonttools==4.61.1
+    # via matplotlib
 fqdn==1.5.1
     # via jsonschema
 gitdb==4.0.12
@@ -162,12 +168,16 @@ jupyterlab-server==2.28.0
     #   notebook
 jupyterlab-widgets==3.0.16
     # via ipywidgets
+kiwisolver==1.4.9
+    # via matplotlib
 lark==1.3.1
     # via rfc3987-syntax
 markupsafe==3.0.3
     # via
     #   jinja2
     #   nbconvert
+matplotlib==3.10.8
+    # via -r requirements.in
 matplotlib-inline==0.2.1
     # via
     #   ipykernel
@@ -198,6 +208,8 @@ notebook-shim==0.2.4
 numpy==2.4.2
     # via
     #   -r requirements.in
+    #   contourpy
+    #   matplotlib
     #   pandas
     #   pydeck
     #   scikit-learn
@@ -211,6 +223,7 @@ packaging==26.0
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
+    #   matplotlib
     #   nbconvert
     #   streamlit
 pandas==2.3.3
@@ -224,7 +237,9 @@ parso==0.8.5
 pexpect==4.9.0
     # via ipython
 pillow==12.1.0
-    # via streamlit
+    # via
+    #   matplotlib
+    #   streamlit
 platformdirs==4.5.1
     # via jupyter-core
 prometheus-client==0.24.1
@@ -255,10 +270,13 @@ pygments==2.19.2
     #   ipython-pygments-lexers
     #   jupyter-console
     #   nbconvert
+pyparsing==3.3.2
+    # via matplotlib
 python-dateutil==2.9.0.post0
     # via
     #   arrow
     #   jupyter-client
+    #   matplotlib
     #   pandas
 python-json-logger==4.0.0
     # via jupyter-events
